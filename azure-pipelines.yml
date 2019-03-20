@@ -19,6 +19,6 @@ steps:
     command: login
     azuresubscriptionEndpoint: demo123
     azureContainerRegistry: mahesh.azurecr.io
-- script: docker build -t mahesh.azurecr.io/$(imageName) /.app
+- script: docker build -t mahesh.azurecr.io/$(imageName) ./app
 - script: docker push mahesh.azurecr.io/$(imageName) 
 
