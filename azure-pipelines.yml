@@ -21,4 +21,4 @@ steps:
   azureContainerRegistry:devcamp123shasb.azurecr.io
 -script: docker build -t devcamp123shasb.azure.io/$(imageName) /.app
 - script: docker push devcamp123shasb.azure.io/$(imageName) 
-script: docker  build -t developer-camp:dev ./app
+
