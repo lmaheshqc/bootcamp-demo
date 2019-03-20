@@ -10,15 +10,15 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 variables:
-  imageName: 'shashankbarsin/bootcamp-demo:$(build.buildId)'
+  imageName: 'bootcamp-demo:$(build.buildId)'
 
 steps:
 - task: Docker@1
   displayName: Container registery login
   inputs:
     command: login
-    azuresubcriptionEndpoint: demo123
-    azureContainerRegistry: devcamp123shasb.azurecr.io
-- script: docker build -t devcamp123shasb.azure.io/$(imageName) /.app
-- script: docker push devcamp123shasb.azure.io/$(imageName) 
+    azuresubscriptionEndpoint: demo123
+    azureContainerRegistry: mahesh.azurecr.io
+- script: docker build -t mahesh.azurecr.io/$(imageName) /.app
+- script: docker push mahesh.azurecr.io/$(imageName) 
 
